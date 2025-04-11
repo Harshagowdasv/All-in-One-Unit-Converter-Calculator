@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<style>
+    .dropdown{
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dpc{
+        display: none;
+        position: absolute;
+        background: linear-gradient(yellow,orange);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        border-radius: 10px;
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    .dpc a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-radius: 10px;
+      }
+
+      .dpc a:hover{
+        background: linear-gradient(to right,yellow,orange);
+      }
+
+      .dropdown:hover .dpc {
+        display: block;
+      }
+
+</style>
+
+<body>
+
+    <header>
+        <h1 id="heading">Welcome to The Conversion Calculator</h1>
+    </header>
+
+
+    <nav class="nav">
+        <ul>
+            <a href="./index.html"><li>Home</li></a>
+            <a href="./about.html"><li>About</li></a>
+            <div class="dropdown">
+                <li class="dropbtn">Calculators</li>
+                <div class="dpc">
+                    <a href="./Calci.html">Simple Calci</a>
+                    <a href="./converter.html">Length Weight Temperatue Converter</a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+
+
+    <div class="input-section">
+        <h1 id="ht">Money💸 Conversion Calculator</h1>
+        <input type="text" placeholder="Enter the Amount IN INR" id="INRinput">
+        <br>
+        <input type="text" placeholder="Enter the Amount IN USD" id="USDinput">
+        <br>
+        <h1 class="select-h1">Select the Type you want to Convert </h1>
+        <select name="" id="select2">
+            <option value="usd">US Dollar</option>    
+            <option value="euro">Euro</option>
+            <option value="gbp">British Pound</option>
+            <option value="aud">Australian Dollar</option>
+            <option value="cad">Canadian Dollar</option>
+            <option value="sgd">Singapore Dollar</option>
+            <option value="chf">Swiss Franc</option>
+            <option value="myr">Malaysian Ringgit</option>
+            <option value="jpy">Japanese Yen</option>
+            
+                
+            
+        </select>
+        <br>
+        <button id="cnbtn">Convert</button>
+
+        <div class="resl">
+            <div id="result">
+            
+
+            </div>
+        </div>
+
+        
+
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>
